@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Login </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<div class="login-image-style" >
+<h1 text-center>MMI</h1>
+</div>
+
+<ion-list>
+
+  <ion-item class="style-item">
+    <ion-input class="style-input" [(ngModel)]="email"   type="text" placeholder="Email Address"></ion-input>
+  </ion-item>
+
+  <ion-item class="style-item">
+    <ion-input class="style-input" [(ngModel)]="password"    type="password" placeholder="Password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<ion-buttons start class="btn-wrapper1" >
+  <button ion-button color="dark" icon-only block (click)="onlogin(email,password)">
+    <ion-icon name="log-in"  ios="ios-log-in" md="md-log-in"  color="nav1"></ion-icon>
+    Login
+  </button>
+</ion-buttons>
+
+
+
+<!-- 
+    <ion-item-divider color="light">A</ion-item-divider>
+    <ion-item-divider color="light">b</ion-item-divider>
+    <ion-item >Balance aaaa</ion-item>
+    <ion-item>Argentina</ion-item> -->
+
+
+
+
+
+</ion-content>

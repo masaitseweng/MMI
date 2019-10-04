@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>
+     Welcome {{name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+        <ion-item-divider text-center  color="dark"><h1>Account List</h1></ion-item-divider>
+
+      <button ion-item  *ngFor="let acc of acc" (click)="viewBalance(acc)">
+        {{acc}}
+      </button>
+
+    <ion-item-divider text-center  color="light"> <ion-row no-padding>
+      <ion-col no-padding>
+    <h2>Balance </h2>
+      </ion-col>
+      <ion-col no-padding>
+    <h1>{{balance}}</h1>
+      </ion-col>
+    </ion-row> 
+    </ion-item-divider>
+
+
+    <ion-item-divider text-center  color="dark"> <ion-row no-padding>
+      <ion-col no-padding>
+    <h2>Overdraft  </h2>
+      </ion-col>
+      <ion-col no-padding>
+    <h1>{{overdraft}}</h1>
+      </ion-col>
+    </ion-row> 
+    </ion-item-divider>
+
+
+    </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-row no-padding>
+      <ion-col no-padding>
+        <button ion-button color="light" block outline (click)="openDeposit()">Deposit</button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button color="light" block clear (click)="openNewaccount()">New account </button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button color="light" block outline (click)="openWithdraw()">Withdraw</button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
